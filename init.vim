@@ -7,11 +7,10 @@ Plug 'morhetz/gruvbox'
 
 " common programming plugins
 Plug 'jiangmiao/auto-pairs'
-
-" scala plugins
-Plug 'derekwyatt/vim-scala'
 Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install() } }
 
+" scala
+Plug 'derekwyatt/vim-scala'
 au BufRead,BufNewFile *.sbt set filetype=scala
 
 call plug#end()
