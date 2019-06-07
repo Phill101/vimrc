@@ -1,9 +1,13 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " colorscheme
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+" Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.6' }
+" Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 
 
@@ -11,12 +15,18 @@ Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', { 'do': './install.sh nightly' }
 
+" plugin for displaying indent levels. <leader>ig to toggle
+Plug 'nathanaelkane/vim-indent-guides'
+
 " scala
 Plug 'derekwyatt/vim-scala'
 au BufRead,BufNewFile *.sbt set filetype=scala
 
 " rust
 Plug 'rust-lang/rust.vim'
+
+" haskell
+Plug 'neovimhaskell/haskell-vim'
 
 
 call plug#end()
@@ -96,13 +106,12 @@ set shortmess+=c    " don't give |ins-completion-menu| messages.
 set signcolumn=yes  " always show signcolumns
 
 
+colorscheme dracula
 
-colorscheme gruvbox
 
-
-set number    " display number of line
-set expandtab " force to use space character on tab
-set tabstop=2 " how many tabs we should use on tab
+set relativenumber  " display numbers
+set expandtab       " force to use space character on tab
+set tabstop=2       " how many tabs we should use on tab
 
 set hls
 set incsearch
