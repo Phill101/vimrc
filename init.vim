@@ -6,8 +6,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " colorscheme
 " Plug 'morhetz/gruvbox'
 " Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.6' }
-" Plug 'joshdick/onedark.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim-scripts/Wombat'
 Plug 'vim-airline/vim-airline'
 
 
@@ -115,7 +115,8 @@ set shortmess+=c    " don't give |ins-completion-menu| messages.
 set signcolumn=yes  " always show signcolumns
 
 
-colorscheme dracula
+set termguicolors
+colorscheme wombat
 
 set relativenumber  " display numbers
 set expandtab       " Tab transformed in spaces
