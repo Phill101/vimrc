@@ -1,19 +1,23 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'easymotion/vim-easymotion'
+
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " colorscheme
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 " Plug 'nanotech/jellybeans.vim', { 'tag': 'v1.6' }
 " Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'vim-scripts/Wombat'
+" Plug 'vim-scripts/Wombat'
 Plug 'vim-airline/vim-airline'
 
 
 
 " common programming plugins
-Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+" Plug 'jiangmiao/auto-pairs' " <M-p> toggle
 Plug 'neoclide/coc.nvim', { 'do': './install.sh nightly' }
 
 " plugin for displaying indent levels. <leader>ig to toggle
@@ -29,10 +33,19 @@ Plug 'rust-lang/rust.vim'
 " haskell
 Plug 'neovimhaskell/haskell-vim'
 
+" protobuf
+Plug 'uarun/vim-protobuf'
+
 
 call plug#end()
 
 let mapleader=" "
+
+" =================
+" vim-scala options
+let g:scala_sort_across_groups=1
+" =================
+
 
 " =================
 " nerdtree mappings
@@ -116,7 +129,10 @@ set signcolumn=yes  " always show signcolumns
 
 
 set termguicolors
-colorscheme wombat
+" colorscheme wombat
+colorscheme gruvbox
+set background=dark
+let g:gruvbox_contrast_dark='soft'
 
 set relativenumber  " display numbers
 set expandtab       " Tab transformed in spaces

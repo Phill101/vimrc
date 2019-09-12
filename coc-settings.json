@@ -1,17 +1,19 @@
 {
   "languageserver": {
     "haskell": {
-      "command": "hie-wrapper",
+      // "command": "hie-wrapper",
+      // "command": "/usr/local/bin/stack exec -- hie-wrapper --lsp -d",
+      "command": "hie",
       "rootPatterns": [".stack.yaml", "cabal.config", "package.yaml"],
       "filetypes": ["hs", "lhs", "haskell"],
-      "initializationOptions": {},
-      "settings": {
-	      "languageServerHaskell": {
+      "initializationOptions": {
+        "languageServerHaskell": {
 		      "hlintOn": false,
 		      "maxNumberOfProblems": 10,
 		      "completionSnippetsOn": true
 	      }
-      }
+      }//,
+      //"settings": {}
     },
     "scala": {
       "command": "metals-vim",
