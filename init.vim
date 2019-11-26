@@ -23,6 +23,9 @@ Plug 'neoclide/coc.nvim', { 'do': './install.sh nightly' }
 " plugin for displaying indent levels. <leader>ig to toggle
 Plug 'nathanaelkane/vim-indent-guides'
 
+" aligning
+Plug 'junegunn/vim-easy-align'
+
 " scala
 Plug 'derekwyatt/vim-scala'
 au BufRead,BufNewFile *.sbt set filetype=scala
@@ -40,6 +43,13 @@ Plug 'uarun/vim-protobuf'
 call plug#end()
 
 let mapleader=" "
+
+
+" =================
+" aligning
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+" =================
 
 " =================
 " vim-scala options
@@ -78,6 +88,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " [c and ]c for navigate diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
@@ -117,6 +128,7 @@ set noshowmode      " disable bottom status bar
 set noruler
 set laststatus=0
 set noshowcmd
+set colorcolumn=120
 
 set hidden          " if hidden is not set, TextEdit might fail.
 set nobackup        " some servers have issues with backup files
