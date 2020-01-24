@@ -39,6 +39,12 @@ Plug 'neovimhaskell/haskell-vim'
 " protobuf
 Plug 'uarun/vim-protobuf'
 
+" markdown
+" if we don't have nodejs and yarn
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+" if we have nodejs and yarn
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 
 call plug#end()
 
@@ -146,13 +152,14 @@ colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark='soft'
 
-set relativenumber  " display numbers
-set expandtab       " Tab transformed in spaces
-set tabstop=2       " Sets tab character to correspond to x columns.
-                    " x spaces are automatically converted to <tab>.
-                    " If expandtab option is on each <tab> character is converted to x spaces.
-set softtabstop=2   " column offset when PRESSING the tab key or the backspace key. 
-set shiftwidth=2    " column offset when using keys '>' and '<' in normal mode.
+set number         " display numbers
+set relativenumber " display numbers
+set expandtab      " Tab transformed in spaces
+set tabstop=2      " Sets tab character to correspond to x columns.
+                   " x spaces are automatically converted to <tab>.
+                   " If expandtab option is on each <tab> character is converted to x spaces.
+set softtabstop=2  " column offset when PRESSING the tab key or the backspace key.
+set shiftwidth=2   " column offset when using keys '>' and '<' in normal mode.
 
 set hls
 set incsearch
