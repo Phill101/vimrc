@@ -14,11 +14,11 @@
 	      }
       }//,
       //"settings": {}
-    },
-    "scala": {
-      "command": "metals-vim",
-      "rootPatterns": ["build.sbt"],
-      "filetypes": ["scala", "sbt"]
-    }
+    }//,
+    //"scala": {
+    //  "command": "metals-vim",
+    //  "rootPatterns": ["build.sbt"],
+    //  "filetypes": ["scala", "sbt"]
+    //}
   }
 }
